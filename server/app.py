@@ -64,13 +64,11 @@ class DeletePlant(Resource):
 
     def delete(self, plant_id):
         return delete_plant(plant_id)
-
-
+    
 api.add_resource(Plants, '/plants')
 api.add_resource(PlantByID, '/plants/<int:id>')
 api.add_resource(UpdatePlant, '/plants/<int:plant_id>')
 api.add_resource(DeletePlant, '/plants/<int:plant_id>')
-
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
